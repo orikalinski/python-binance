@@ -1,6 +1,7 @@
 # coding=utf-8
 
 import json
+import os
 import threading
 
 from autobahn.twisted.websocket import WebSocketClientFactory, \
@@ -97,6 +98,10 @@ class BinanceSocketManager(threading.Thread):
         factory.protocol = BinanceClientProtocol
         factory.callback = callback
         factory.reconnect = True
+        proxy_url = os.environ.get("PROXY_URL")
+        if proxy_url:
+            host, port = proxy_url.split(":")
+            factory.proxy = {'host': host, 'port': port}
         context_factory = ssl.ClientContextFactory()
 
         self._conns[path] = connectWS(factory, context_factory)
