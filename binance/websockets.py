@@ -101,7 +101,7 @@ class BinanceSocketManager(threading.Thread):
         proxy_url = os.environ.get("PROXY_URL")
         if proxy_url:
             host, port = proxy_url.split(":")
-            factory.proxy = {'host': host, 'port': port}
+            factory.proxy = {'host': host, 'port': int(port)}
         context_factory = ssl.ClientContextFactory()
 
         self._conns[path] = connectWS(factory, context_factory)
