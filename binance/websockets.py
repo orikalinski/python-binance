@@ -1,5 +1,6 @@
 # coding=utf-8
 import gzip
+import os
 import threading
 
 from autobahn.twisted.websocket import WebSocketClientFactory, \
