@@ -1,6 +1,47 @@
 Changelog
 =========
 
+v0.7.11
+^^^^^^^^^^
+
+**Added**
+- Vanilla Options REST endpoints
+- Vanilla Options websockets
+- Futures order type enums
+
+**Updated**
+
+- websocket keep-alive functions for different socket types
+- dependencies
+
+**Fixed**
+
+- change to User-Agent to avoid connection issues
+
+v0.7.5.dev
+^^^^^^^^^^
+**Changed**
+- Stock json lib to ujson (https://github.com/sammchardy/python-binance/pull/383)
+
+v0.7.5 - 2020-02-06
+^^^^^^^^^^^^^^^^^^^
+
+**Added**
+
+- Futures REST endpoints
+- Lending REST endpoints
+- OCO Orders function `create_oco_order`, `order_oco_buy`, `order_oco_sell`
+- Average Price function `get_avg_price`
+- Support for other domains (.us, .jp, etc)
+
+**Updated**
+
+- dependencies
+
+**Fixed**
+
+- websocket keepalive callback not found
+
 v0.7.4 - 2019-09-22
 ^^^^^^^^^^^^^^^^^^^
 

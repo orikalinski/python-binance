@@ -3,14 +3,15 @@ from setuptools import setup
 
 setup(
     name='python-binance',
-    version='0.7.4',
+    version='0.7.11',
     packages=['binance'],
     description='Binance REST API python implementation',
     url='https://github.com/sammchardy/python-binance',
     author='Sam McHardy',
     license='MIT',
     author_email='',
-    install_requires=['requests', 'six', 'Twisted', 'pyOpenSSL', 'autobahn', 'service-identity', 'dateparser', 'urllib3', 'chardet', 'certifi', 'cryptography', ],
+    install_requires=['requests', 'six', 'Twisted', 'pyOpenSSL', 'autobahn', 'service-identity', 'dateparser',
+                      'urllib3', 'certifi', 'cryptography', 'ujson'],
     keywords='binance exchange rest api bitcoin ethereum btc eth neo',
     classifiers=[
         'Intended Audience :: Developers',
@@ -19,7 +20,6 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
